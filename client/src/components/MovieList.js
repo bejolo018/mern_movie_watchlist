@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { getItems, deleteItem } from '../actions/itemActions';
 import PropTypes from 'prop-types';
 
-class ShoppingList extends Component{
+class MovieList extends Component{
     componentDidMount(){
         this.props.getItems();
     }
@@ -39,7 +39,7 @@ class ShoppingList extends Component{
     }
 }
 
-ShoppingList.propTypes = {
+MovieList.propTypes = {
     getItems: PropTypes.func.isRequired,
     item: PropTypes.object.isRequired
 }
@@ -48,4 +48,4 @@ const mapStateToProps = (state) =>({
     item: state.item
 })
 
-export default connect(mapStateToProps, { getItems, deleteItem })(ShoppingList);
+export default connect(mapStateToProps, { getItems, deleteItem })(MovieList);
