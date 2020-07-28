@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 // DB Config
-const db = config.get('mongoURI');
+const db = require('./config/default.json').mongoURI
 
 // Connect to MONGODB
 mongoose
